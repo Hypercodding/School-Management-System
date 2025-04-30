@@ -1,7 +1,7 @@
 "use client";
 
 import { useContext, useState, useEffect } from "react";
-import { SchoolRegistrationContext } from "../context/SchoolRegistrationContext";
+import { SchoolRegistrationContext } from "../../context/SchoolRegistrationContext";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 

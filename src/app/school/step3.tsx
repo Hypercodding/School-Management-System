@@ -2,8 +2,8 @@
 
 import React, { useContext } from "react";
 import { useFormik } from "formik";
-import { step3Validation } from "../utils/schoolValidations";
-import { SchoolRegistrationContext } from "../context/SchoolRegistrationContext";
+import { step3Validation } from "../../utils/schoolValidations";
+import { SchoolRegistrationContext } from "../../context/SchoolRegistrationContext";
 
 const Step3 = () => {
   const schoolRegistrationCtx = useContext(SchoolRegistrationContext);

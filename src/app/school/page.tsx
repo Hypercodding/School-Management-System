@@ -1,6 +1,6 @@
 "use client";
 import FormStepper from "@/components/FormStepper";
-import { SchoolRegistrationContext } from "../context/SchoolRegistrationContext";
+import { SchoolRegistrationContext } from "../../context/SchoolRegistrationContext";
 import { useContext } from "react";
 import Step1 from "./step1";
 import Step2 from "./step2";

@@ -1,9 +1,9 @@
 "use client";
 
 import { useContext } from "react";
-import { SchoolRegistrationContext } from "../context/SchoolRegistrationContext";
+import { SchoolRegistrationContext } from "../../context/SchoolRegistrationContext";
 import { useFormik } from "formik";
-import { step1Validation } from "../utils/schoolValidations";
+import { step1Validation } from "../../utils/schoolValidations";
 
 export default function Step1() {
   const schoolRegistrationCtx = useContext(SchoolRegistrationContext);

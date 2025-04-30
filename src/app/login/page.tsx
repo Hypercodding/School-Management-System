@@ -98,9 +98,8 @@ const Page = () => {
                       type="email"
                       id="email"
                       name="email"
-                      className={`mt-1 block w-full rounded-sm bg-gray-200 border-gray-300 focus:border-blue-500 focus:ring-blue-500 p-2 ${
-                        errors.email && touched.email ? "border-red-500" : ""
-                      }`}
+                      className={`mt-1 block w-full rounded-sm bg-gray-200 border-gray-300 focus:border-blue-500 focus:ring-blue-500 p-2 ${errors.email && touched.email ? "border-red-500" : ""
+                        }`}
                       placeholder="Email"
                     />
                     {errors.email && touched.email && (
@@ -121,11 +120,10 @@ const Page = () => {
                         type={showPassword ? "text" : "password"}
                         id="password"
                         name="password"
-                        className={`mt-1 block w-full rounded-sm bg-gray-200 border-gray-300 focus:border-blue-500 focus:ring-blue-500 p-2 pr-10 ${
-                          errors.password && touched.password
-                            ? "border-red-500"
-                            : ""
-                        }`}
+                        className={`mt-1 block w-full rounded-sm bg-gray-200 border-gray-300 focus:border-blue-500 focus:ring-blue-500 p-2 pr-10 ${errors.password && touched.password
+                          ? "border-red-500"
+                          : ""
+                          }`}
                         placeholder="Enter password"
                       />
                       <button

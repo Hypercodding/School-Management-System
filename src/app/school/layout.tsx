@@ -1,4 +1,4 @@
-import { SchoolRegistrationProvider } from "../context/SchoolRegistrationContext";
+import { SchoolRegistrationProvider } from "../../context/SchoolRegistrationContext";
 
 export default function SchooolLayout({
   children,

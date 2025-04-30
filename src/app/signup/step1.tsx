@@ -1,9 +1,9 @@
 "use client";
 
 import { useContext } from "react";
-import { SignupContext } from "../context/SignupContext";
+import { SignupContext } from "../../context/SignupContext";
 import { useFormik } from "formik";
-import { step1Validation } from "../utils/validations";
+import { step1Validation } from "../../utils/validations";
 
 function Step1() {
   const signupCtx = useContext(SignupContext);

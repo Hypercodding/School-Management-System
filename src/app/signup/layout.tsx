@@ -1,6 +1,6 @@
 "use client";
 
-import { SignupProvider } from "../context/SignupContext";
+import { SignupProvider } from "../../context/SignupContext";
 
 export default function SignupLayout({
   children,

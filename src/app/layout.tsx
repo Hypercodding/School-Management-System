@@ -1,6 +1,6 @@
 import "./globals.css";
 import { Telex } from "next/font/google";
-import { SignupProvider } from "./context/SignupContext";
+import { SignupProvider } from "../context/SignupContext";
 
 // import Navbar from "@/components/layout/Navbar";
 

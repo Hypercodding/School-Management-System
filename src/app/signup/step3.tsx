@@ -1,10 +1,12 @@
 "use client";
 
 import React, { useContext } from "react";
-import { SignupContext } from "../context/SignupContext";
+import { SignupContext } from "../../context/SignupContext";
 import { useFormik } from "formik";
-import { step3Validation } from "../utils/validations";
+import { step3Validation } from "../../utils/validations";
 import { useRouter } from "next/navigation";
+import { useSetAtom } from "jotai";
+import { UserAtom } from "@/atoms/UserAtom";
 
 const Step3 = () => {
   const signupCtx = useContext(SignupContext);
@@ -13,6 +15,7 @@ const Step3 = () => {
 
   const { formData, setFormData, setStep } = signupCtx;
   const router = useRouter();
+  const setUser = useSetAtom(UserAtom)
 
   const formik = useFormik({
     initialValues: {
@@ -24,8 +27,22 @@ const Step3 = () => {
     },
     validationSchema: step3Validation,
     onSubmit: (values) => {
+      const userPayload = {
+        userName: formData.username,
+        email: formData.email,
+        password: formData.password,
+        role: formData.role,
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        phoneNumber: formData.phoneNumber,
+        address: values,
+        profileImage: formData.profileImage,
+        active: formData.active.toString(), // cast boolean to string if needed
+        emailVarified: false, // default for signup
+      };
       const updatedFormData = { ...formData, address: values };
       setFormData(updatedFormData);
+      setUser(userPayload)
       console.log("All Form Data After Step 3:", updatedFormData);
 
       alert(
